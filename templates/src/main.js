@@ -35,7 +35,7 @@ var surface = new Surface({
 
 mainsurface.on('mousemove',function(e){
     surface.setContent("x: "+e.offsetX+", y: "+e.offsetY);
-    surface.state = new StateModifier({
+    surface.state = new Modifier({
         transform: Transform.translate(e.offsetX-50, e.offsetY-50, 0)
     })
     mainContext.add(surface.state).add(surface)
